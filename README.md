@@ -9,7 +9,7 @@ $minikube addone enable metallb
 
 Enable metallb >> loadbalancer IP
 $minikube ip
-$minikube addons metallb configure
+$minikube addons configure metallb
     loadbalancer start Ip:
     loadbalancer end IP:
 
