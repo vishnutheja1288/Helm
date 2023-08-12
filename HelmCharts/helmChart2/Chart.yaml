@@ -1,0 +1,19 @@
+apiVersion: v2
+name: helmChart2
+appVersion: "1.0"
+description: A Demo Helm chart for Connected Applications
+version: 1.0.0
+type: application
+dependencies:
+- name: traefik
+  version: 10.6.0
+  repository: https://helm.traefik.io/traefik
+- name: connectedcity-app
+  version: 1.0.0
+  repository: "file://charts/connectedcity-app/"
+- name: connectedfactory-app
+  version: 1.0.0
+  repository: "file://charts/connectedfactory-app/"
+- name: kubernetes-dashboard
+  version: 1.0.0
+  repository: "file://charts/kubernetes-dashboard/"

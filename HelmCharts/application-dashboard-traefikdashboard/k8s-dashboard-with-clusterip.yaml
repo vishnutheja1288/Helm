@@ -31,7 +31,7 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: k8dash-service
+  name: k8dash
   namespace: kube-system
 spec:
   ports:
@@ -40,11 +40,10 @@ spec:
   selector:
     k8s-app: k8dash
 ---
-aapiVersion: v1
+apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: k8dash-sa
-
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -57,4 +56,4 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: k8dash-sa
-  namespace: default
+  namespace: traefik

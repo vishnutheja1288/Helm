@@ -13,6 +13,6 @@ spec:
         path: "/"
         backend: 
           service:
-            name: k8dash-service
+            name: k8dash
             port:
               number: 80

@@ -1,0 +1,30 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: application-ingress-rules
+  # annotations:
+  #   kubernetes.io/ingress.class: traefik
+spec:
+  ingressClassName: traefik-lb
+  rules:
+  - host: connected-city-bhadri.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend: 
+          service:
+            name: connectedcity-service
+            port:
+              number: 80
+  - host: connected-factory-bhadri.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend: 
+          service:
+            name: connectedfactory-service
+            port:
+              number: 80
+

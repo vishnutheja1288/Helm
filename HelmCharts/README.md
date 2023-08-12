@@ -29,4 +29,28 @@ $
 Deploy the application and Skooner dashboard
 $kubectl create -f kubectl-app-deployment/
 
+---------------------------------------------
+create template
+$ helm crate <template name>
+
+$ helm dependency list <folder-name>
+
+$ helm dependency update <folder-name>
+
+$ helm install <any-name> <folder-name>
+
+
+CHART MUSEUM
+---------------
+
+$ chartmuseum --debug --port=8080 --storage="local" --storage-local-rootdir="./chartstorage"
+
+$ helm package helmChart1/
+
+$ curl --data-binay '@mychart-0.1.0.tgz' http://<minikubeip>:8080/api/charts
+
+
+-------------------------------------------------------------------------------------------------
+
+Dependencies
 
